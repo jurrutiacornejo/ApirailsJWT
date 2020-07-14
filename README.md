@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta api fue realizada siguiedo los pasos de curso en udemy
 
-Things you may want to cover:
+Esta api contempla de lo siguiente:
 
-* Ruby version
+* CRUD
 
-* System dependencies
+* Login y validacion mediante JWT
 
-* Configuration
+* BD utilizada sqlite
 
-* Database creation
+* Respuestas mediante jbuilder
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Sesiones mediante DEVISE
 
 * ...
