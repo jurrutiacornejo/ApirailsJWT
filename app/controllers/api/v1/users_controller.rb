@@ -32,6 +32,9 @@ class Api::V1::UsersController < ApplicationController
       #render json: {user: @user, status: :created}, status: :created
       @token = Token.new(user_id: @user.id)
       if @token.save
+        json_encode = {token: @token.token}
+        #seteamos token condificado
+        @token.token = JWT.encode(json_encode, @key)
         render "api/v1/users/show"
       else
         render json: {response: t('credentials.error'), status: :bad_request}, status: :bad_request

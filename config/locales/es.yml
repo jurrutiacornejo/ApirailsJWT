@@ -18,6 +18,7 @@ es:
   rules:
     dont_empty: "No se encontraron parametros en el recurso"
     dont_register: "No se ha podido crear el recurso solicitado"
+    dont_permission: "No estás autorizado para realizar esta accion"
   crud:
     created: "%{resource} registrado"
     updated: "%{resource} actualizado"
@@ -27,3 +28,5 @@ es:
     updated: "Usuario con el email %{email} actualizado"
   jwt:
     decode_error: "Token corrupto"
+  notes:
+    delete: "La nota ha sido eliminada con exito!!"

@@ -2,6 +2,14 @@ class ApplicationController < ActionController::Base
     protect_from_forgery with: :null_session#:exception
     before_action :set_locale#, :authenticate
     private
+    rescue_from CanCan::AccessDenied do |excepition|
+        render json: {error: t('rules.dont_permission')}, status: :unauthorized
+    end
+
+    def current_ability
+        @current_ability ||= Ability.new(@current_user)
+    end
+
     def set_locale
         #si se le indica el idioma lo setea desde params[:locale
         #si no, setea el valor por defecto configurado en application.rb
